@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>花都动漫在线观看-番剧清单与追番指南</title>
+<meta name="description" content="花都动漫在线观看频道汇总当季新番、完结老番与剧场版清单，按题材整理播放顺序、字幕版本与更新时段，附追番核对的更新日历、口碑分层与常见问题说明。">
+<meta name="keywords" content="花都动漫在线观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b2f6b'/%3E%3Cpath d='M20 18l26 14-26 14z' fill='%23ffc94d'/%3E%3Ccircle cx='48' cy='20' r='5' fill='%2359d1c8'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "花都动漫在线观看",
+  "inLanguage": "zh-CN",
+  "description": "按题材、播出季与字幕版本整理番剧清单与追番指南的动漫观看频道。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "当季新番通常周几更新？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "日本深夜档多在周一至周日00:00至02:00前后首播，国内平台字幕版一般延后1到3小时上线，上午10点前基本能看到当天全部排片。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一部番TV版和BD版字幕有差别吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有。TV放送版受时长限制，部分台词会在BD版补回，字幕组多在BD发售后的两周内出修订轴，涉及专有名词译名统一。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "续作没看过前作能直接追吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "单元剧结构可以直接看，比如《夏目友人帐》每集独立；连续剧情作品如《进击的巨人》最终季则必须先补前作，否则人物动机无法成立。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "剧场版和TV版之间有必看顺序吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分两种情况。原创剧场版多为独立故事，如《你的名字。》；而《鬼灭之刃》无限列车篇插在TV第一季与第二季之间，顺序错开会丢失关键设定。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "字幕组的更新时间为什么比平台晚？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "个人字幕组需要完成翻译、校对、时间轴、压制四道工序，通常比正版平台晚6到48小时，冷门番可能更久。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么判断一部番值不值得先追？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看前三话是否完成主角目标设定、是否有明确冲突、作画是否稳定。三话后仍靠悬念撑场面的作品，弃番成本反而更低。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1c2033;
+  --ink-2:#3a4060;
+  --muted:#6a7090;
+  --bg:#f5f6fb;
+  --card:#ffffff;
+  --line:#e2e5f0;
+  --brand:#2b2f6b;
+  --brand-2:#3f47a3;
+  --accent:#ffb020;
+  --accent-2:#59d1c8;
+  --pink:#ef6f9a;
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:22px;
+  --shadow-s:0 1px 2px rgba(28,32,51,.06),0 2px 8px rgba(28,32,51,.05);
+  --shadow-m:0 4px 18px rgba(28,32,51,.09);
+  --space-1:6px;
+  --space-2:12px;
+  --space-3:18px;
+  --space-4:26px;
+  --space-5:38px;
+  --space-6:56px;
+  --announce-h:40px;
+  --header-h:62px;
+  --sticky-sum:calc(var(--announce-h) + var(--header-h));
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .85em;padding-left:1.25em}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky-sum) + 12px)}
+
+/* ============ 公告条 + 页头 ============ */
+.sticky-stack{
+  position:sticky;top:0;z-index:60;
+}
+.announce{
+  height:var(--announce-h);
+  background:linear-gradient(90deg,var(--brand) 0%,var(--brand-2) 60%,#5a3f9e 100%);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13.5px;
+  padding:0 14px;
+  gap:10px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.announce strong{color:var(--accent)}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--accent-2);flex:none}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+.site-header{
+  height:var(--header-h);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-s);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;height:100%;
+  display:flex;align-items:center;gap:var(--space-3);
+  padding:0 18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-logo{width:34px;height:34px;flex:none}
+.brand-text{font-size:17px;font-weight:800;color:var(--brand);letter-spacing:.5px;white-space:nowrap}
+.main-nav{display:flex;gap:2px;margin-left:var(--space-2);flex:1;overflow-x:auto;scrollbar-width:none}
+.main-nav::-webkit-scrollbar{display:none}
+.main-nav a{
+  display:block;padding:6px 11px;border-radius:999px;
+  font-size:14px;color:var(--ink-2);white-space:nowrap;
+}
+.main-nav a:hover{background:#eef0fa;color:var(--brand);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-box{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fbfbff;padding:3px 4px 3px 12px;transition:border-color .2s}
+.search-box:focus-within{border-color:var(--brand-2);box-shadow:0 0 0 3px rgba(63,71,163,.12)}
+.search-box input{
+  border:0;background:transparent;outline:none;font:inherit;font-size:13.5px;width:126px;color:var(--ink);
+}
+.search-box button{
+  border:0;border-radius:999px;background:var(--brand);color:#fff;
+  font:inherit;font-size:13px;padding:4px 12px;cursor:pointer;
+}
+.menu-toggle{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:var(--radius-s);
+  width:36px;height:34px;cursor:pointer;align-items:center;justify-content:center;
+}
+.menu-toggle span{display:block;width:16px;height:2px;background:var(--ink);position:relative}
+.menu-toggle span::before,.menu-toggle span::after{content:"";position:absolute;left:0;width:16px;height:2px;background:var(--ink)}
+.menu-toggle span::before{top:-5px}.menu-toggle span::after{top:5px}
+.search-feedback{
+  max-width:1180px;margin:0 auto;padding:0 18px;
+  font-size:13.5px;color:var(--pink);
+}
+.search-feedback:empty{display:none}
+
+/* ============ 首屏 ============ */
+.hero{
+  background:
+    radial-gradient(1100px 400px at 85% -10%,rgba(89,209,200,.28),transparent 60%),
+    radial-gradient(900px 380px at 0% 0%,rgba(255,176,32,.18),transparent 55%),
+    linear-gradient(160deg,#eef1ff 0%,#f7f8fd 55%,#f5f6fb 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:var(--space-5) 18px var(--space-4);
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-4);align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:4px 14px;font-size:13px;color:var(--brand);box-shadow:var(--shadow-s);
+}
+.hero-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 4px rgba(89,209,200,.25)}
+.hero h1{font-size:clamp(28px,4.2vw,42px);margin:14px 0 12px;letter-spacing:1px;color:var(--brand)}
+.hero-desc{font-size:16px;color:var(--ink-2);max-width:34em;margin-bottom:var(--space-3)}
+.hero-desc b{color:var(--ink);background:linear-gradient(transparent 62%,rgba(255,176,32,.5) 0);padding:0 2px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:var(--space-3)}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 20px;border-radius:999px;font-size:14.5px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(43,47,107,.28)}
+.btn-ghost{background:#fff;color:var(--brand);border-color:#cdd3ee}
+.hero-stats{display:flex;flex-wrap:wrap;gap:var(--space-3);font-size:13.5px;color:var(--muted)}
+.hero-stats b{display:block;font-size:20px;color:var(--brand);line-height:1.2}
+.hero-art{position:relative;min-height:260px}
+.hero-art svg{width:100%;height:auto}
+.hero-badge{
+  position:absolute;right:6px;bottom:6px;background:#fff;border-radius:var(--radius-m);
+  box-shadow:var(--shadow-m);padding:8px 14px;font-size:12.5px;color:var(--ink-2);border:1px solid var(--line);
+}
+.hero-badge b{color:var(--pink)}
+
+/* ============ 布局 ============ */
+.layout{
+  max-width:1180px;margin:0 auto;padding:var(--space-5) 18px var(--space-6);
+  display:grid;grid-template-columns:minmax(0,1fr) 288px;gap:var(--space-4);align-items:start;
+}
+.main-col{min-width:0}
+.side-col{display:flex;flex-direction:column;gap:var(--space-3)}
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-s);
+}
+.block{margin-bottom:var(--space-5)}
+.block-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:var(--space-3);flex-wrap:wrap}
+.block-head h2{font-size:22px;color:var(--brand);position:relative;padding-left:14px}
+.block-head h2::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:4px;background:linear-gradient(var(--accent),var(--pink))}
+.block-head .sub{font-size:13px;color:var(--muted)}
+.sec-kicker{font-size:12.5px;letter-spacing:2px;color:var(--accent);font-weight:700;text-transform:uppercase}
+
+/* 领域概览：网格卡片 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-2)}
+.ov-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--space-3);box-shadow:var(--shadow-s);transition:transform .16s ease,box-shadow .16s ease;
+}
+.ov-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m)}
+.ov-card h3{font-size:16px;margin-bottom:6px;color:var(--ink)}
+.ov-card p{font-size:13.5px;color:var(--muted);margin:0}
+.ov-card .num{font-size:12px;font-weight:700;color:var(--brand-2);background:#eef0fa;border-radius:6px;padding:1px 7px;display:inline-block;margin-bottom:8px}
+
+/* 精选推荐：非对称组合 */
+.feature-grid{display:grid;grid-template-columns:1.28fr 1fr;gap:var(--space-2)}
+.feature-main{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);overflow:hidden;
+  box-shadow:var(--shadow-s);display:flex;flex-direction:column;
+}
+.feature-main img{width:100%;height:216px;object-fit:cover}
+.feature-body{padding:var(--space-3)}
+.feature-body h3{font-size:19px;margin-bottom:8px}
+.feature-body p{font-size:14px;color:var(--ink-2);margin-bottom:10px}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:12px;padding:2px 9px;border-radius:999px;background:#eef0fa;color:var(--brand-2);
+  border:1px solid #dde1f4;
+}
+.tag.warm{background:#fff4e0;color:#a86a00;border-color:#ffe1ad}
+.tag.teal{background:#e3faf7;color:#137a71;border-color:#bdeee8}
+.feature-side{display:flex;flex-direction:column;gap:var(--space-2)}
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:14px 16px;box-shadow:var(--shadow-s);
+}
+.side-card h3{font-size:15.5px;margin-bottom:6px}
+.side-card p{font-size:13px;color:var(--muted);margin:0}
+.side-card .meta{font-size:12px;color:var(--pink);margin-top:6px}
+
+/* 最新更新：紧凑列表 */
+.update-list{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);box-shadow:var(--shadow-s);overflow:hidden}
+.update-item{
+  display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:12px 16px;border-bottom:1px solid var(--line);
+}
+.update-item:last-child{border-bottom:0}
+.update-time{font-size:12.5px;color:var(--muted);text-align:center;line-height:1.35}
+.update-time b{display:block;font-size:14px;color:var(--brand)}
+.update-title{font-size:14.5px;font-weight:600;margin-bottom:2px}
+.update-title a{color:var(--ink)}
+.update-title a:hover{color:var(--brand-2)}
+.update-desc{font-size:12.5px;color:var(--muted);margin:0}
+.update-ep{font-size:12px;color:var(--brand-2);background:#eef0fa;border-radius:6px;padding:2px 8px;white-space:nowrap}
+
+/* 分类入口：标签索引 */
+.channel-index{display:flex;flex-wrap:wrap;gap:9px}
+.channel-index a{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:7px 16px;font-size:14px;color:var(--ink-2);box-shadow:var(--shadow-s);
+  transition:border-color .16s,color .16s,transform .16s;
+}
+.channel-index a:hover{border-color:var(--brand-2);color:var(--brand);transform:translateY(-2px);text-decoration:none}
+.channel-index a .cnt{font-size:11.5px;color:var(--muted)}
+.channel-index a:nth-child(3n+2){background:#fffdf5;border-color:#f4e9cd}
+.channel-index a:nth-child(4n+1){background:#f7fbff}
+
+/* 深度解析 */
+.article-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:var(--space-4);box-shadow:var(--shadow-s);
+}
+.article-card h2{font-size:22px;color:var(--brand);margin-bottom:6px}
+.article-lead{font-size:14.5px;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:12px;margin-bottom:var(--space-3)}
+.article-card h3{font-size:17px;margin:var(--space-3) 0 8px;color:var(--brand-2)}
+.article-card p{font-size:14.5px;color:var(--ink-2)}
+.article-card .factbox{
+  background:#f7f8fd;border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:14px 16px;font-size:13.5px;color:var(--ink-2);margin:var(--space-2) 0;
+}
+.factbox table{border-collapse:collapse;width:100%;font-size:13px}
+.factbox th,.factbox td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
+.factbox th{color:var(--muted);font-weight:600;white-space:nowrap}
+.quote-card{
+  background:linear-gradient(135deg,#fff8e8,#fffdf7);border:1px solid #f6e4bd;border-radius:var(--radius-m);
+  padding:16px 18px;font-size:14px;color:#6b4a00;margin:var(--space-2) 0;position:relative;
+}
+.quote-card::before{content:"“";position:absolute;left:10px;top:-6px;font-size:44px;color:#f0c56a;line-height:1}
+.quote-card p{padding-left:16px;margin:0;color:#6b4a00}
+
+/* 体验指南：编号步骤 */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:var(--space-2)}
+.steps li{
+  counter-increment:step;position:relative;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-m);padding:16px 18px 16px 58px;box-shadow:var(--shadow-s);
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;left:14px;top:14px;width:30px;height:30px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps h3{font-size:15.5px;margin-bottom:4px}
+.steps p{font-size:13.5px;color:var(--muted);margin:0}
+
+/* FAQ */
+.faq-list{display:grid;gap:10px}
+details.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-s);overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:14px 18px;font-size:15px;font-weight:600;color:var(--ink);
+  list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";font-size:20px;color:var(--brand-2);line-height:1;transition:transform .2s}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq .faq-body{padding:0 18px 16px;font-size:14px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:12px;margin-top:-2px}
+details.faq summary:focus-visible{outline:2px solid var(--brand-2);outline-offset:-2px}
+
+/* 评论 */
+.comment-list{display:grid;gap:var(--space-2)}
+.comment{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:14px 16px;box-shadow:var(--shadow-s);
+}
+.comment-head{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.avatar{width:30px;height:30px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff}
+.comment-name{font-size:13.5px;font-weight:600}
+.comment-meta{font-size:12px;color:var(--muted);margin-left:auto}
+.comment p{font-size:13.5px;color:var(--ink-2);margin:0}
+.comment p b{color:var(--brand-2)}
+.c1{background:#3f47a3}.c2{background:#ef6f9a}.c3{background:#2f9e8f}.c4{background:#c98a12}.c5{background:#7a5bbf}
+
+/* 相关资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2)}
+.news-item{
+  display:flex;gap:12px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-m);padding:12px;box-shadow:var(--shadow-s);
+}
+.news-item img{width:88px;height:66px;border-radius:var(--radius-s);object-fit:cover;flex:none}
+.news-item h3{font-size:14px;margin-bottom:4px;line-height:1.45}
+.news-item h3 a{color:var(--ink)}
+.news-item p{font-size:12.5px;color:var(--muted);margin:0}
+.news-item .date{font-size:11.5px;color:var(--pink)}
+
+/* 相关推荐：标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  font-size:13.5px;padding:6px 14px;border-radius:var(--radius-s);
+  background:var(--card);border:1px solid var(--line);color:var(--ink-2);
+  box-shadow:var(--shadow-s);transition:color .16s,border-color .16s;
+}
+.rec-tags a:hover{color:var(--brand);border-color:var(--brand-2);text-decoration:none}
+
+/* 榜单 */
+.rank-list{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);box-shadow:var(--shadow-s);overflow:hidden}
+.rank-item{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-bottom:1px solid var(--line)}
+.rank-item:last-child{border-bottom:0}
+.rank-no{width:26px;height:26px;border-radius:8px;background:#eef0fa;color:var(--brand);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex:none}
+.rank-item:nth-child(1) .rank-no{background:var(--accent);color:#fff}
+.rank-item:nth-child(2) .rank-no{background:#9aa4d8;color:#fff}
+.rank-item:nth-child(3) .rank-no{background:#e0b98c;color:#fff}
+.rank-body{min-width:0}
+.rank-body h3{font-size:14.5px;margin-bottom:2px}
+.rank-body p{font-size:12.5px;color:var(--muted);margin:0}
+.rank-score{margin-left:auto;font-size:12.5px;color:var(--brand-2);font-weight:700;white-space:nowrap}
+
+/* 侧栏 */
+.side-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-s);padding:16px;
+}
+.side-panel h2{font-size:16px;margin-bottom:10px;color:var(--brand);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.side-nav a{
+  display:block;font-size:13.5px;color:var(--ink-2);padding:6px 10px;border-radius:8px;border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#f5f6fb;text-decoration:none}
+.side-nav a.active{background:#eef0fa;color:var(--brand);border-left-color:var(--accent);font-weight:600}
+.side-note{font-size:12.5px;color:var(--muted);line-height:1.7}
+.side-note strong{color:var(--ink-2)}
+.mini-timeline{list-style:none;padding:0;margin:0;font-size:13px;color:var(--ink-2);display:grid;gap:8px}
+.mini-timeline li{display:flex;gap:9px}
+.mini-timeline .t{color:var(--brand-2);font-weight:700;white-space:nowrap}
+
+/* 页尾 */
+.site-footer{background:#1c2033;color:#c9cde0;padding:var(--space-5) 0 var(--space-4);margin-top:var(--space-4)}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:var(--space-4)}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer-brand .brand-text{color:#fff}
+.footer-pos{font-size:13.5px;color:#a6adc9;line-height:1.8}
+.footer-col h3{font-size:14px;color:#fff;margin-bottom:10px;letter-spacing:1px}
+.footer-col ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.footer-col a{color:#a6adc9;font-size:13px}
+.footer-col a:hover{color:var(--accent);text-decoration:none}
+.footer-bottom{
+  max-width:1180px;margin:var(--space-4) auto 0;padding:14px 18px 0;
+  border-top:1px solid #333850;font-size:12.5px;color:#8a91ad;
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+}
+.footer-bottom p{margin:0}
+
+/* 回顶 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:80;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;cursor:pointer;
+  box-shadow:0 6px 18px rgba(43,47,107,.4);
+  display:none;align-items:center;justify-content:center;font-size:18px;
+  transition:transform .16s ease,background .16s;
+}
+.to-top.show{display:flex}
+.to-top:hover{transform:translateY(-3px);background:var(--brand-2)}
+
+/* ============ 响应式 ============ */
+@media (max-width:1020px){
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .hero-inner{grid-template-columns:1fr;gap:var(--space-3)}
+  .hero-art{max-width:440px}
+  .overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .main-nav{display:none}
+  .main-nav.open{
+    display:flex;position:absolute;top:calc(var(--announce-h) + var(--header-h));left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow-m);
+    flex-wrap:wrap;padding:10px 14px;gap:6px;z-index:70;margin-left:0;
+  }
+  .menu-toggle{display:flex}
+  .search-box input{width:96px}
+  .feature-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .header-inner{padding:0 12px;gap:8px}
+  .brand-text{font-size:15px}
+  .search-box{display:none}
+  .overview-grid{grid-template-columns:1fr}
+  .update-item{grid-template-columns:52px minmax(0,1fr);gap:10px}
+  .update-item .update-ep{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .article-card{padding:18px 14px}
+  .hero-inner{padding:var(--space-4) 14px}
+  .layout{padding:var(--space-4) 14px var(--space-5)}
+  .block-head h2{font-size:19px}
+  .to-top{right:12px;bottom:14px;width:40px;height:40px}
+  .announce{font-size:12px}
+  .announce .announce-extra{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .ov-card:hover,.btn:hover,.channel-index a:hover,.to-top:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="announce">
+    <span class="dot"></span>
+    <span><strong>11月8日</strong>《苍岚纪行》第6话、更新至 <strong>22:40</strong> 简体字幕；《旅町食堂 第二季》BD修订轴已放出</span>
+    <span class="announce-extra">· 本周新增 9 部同步番</span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#2b2f6b"/>
+          <path d="M20 18l26 14-26 14z" fill="#ffb020"/>
+          <circle cx="48" cy="20" r="5" fill="#59d1c8"/>
+          <rect x="14" y="48" width="36" height="4" rx="2" fill="#ef6f9a"/>
+        </svg>
+        <span class="brand-text">花都动漫在线观看</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航菜单"><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">更新日历</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#rank">口碑榜</a>
+      </nav>
+      <div class="header-tools">
+        <form class="search-box" id="searchForm" role="search" aria-label="站内番剧查找">
+          <input type="search" id="searchInput" placeholder="找番 / 找字幕组" aria-label="输入番剧或字幕组名称">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+    </div>
+    <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-tag"><span class="pulse"></span>2026 年秋季番 · 第 6 周</span>
+      <h1>花都动漫在线观看</h1>
+      <p class="hero-desc">按播出季和字幕版本整理的追番清单：<b>42 部在播同步番</b>、<b>18 部完结补番包</b>、<b>9 部剧场版</b>，每一条都标注首播时间、话数进度和字幕组来源，方便对照更新与切换版本。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#latest">查看今日更新</a>
+        <a class="btn btn-ghost" href="/#guide">追番顺序怎么排</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>42</b>在播同步番</div>
+        <div><b>18</b>完结补番包</div>
+        <div><b>6</b>常用字幕组</div>
+        <div><b>11-08</b>数据核对日</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 300" role="img" aria-label="首屏插画：播放窗口与排片时间轴">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3f47a3"/>
+            <stop offset="1" stop-color="#2b2f6b"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffb020"/>
+            <stop offset="1" stop-color="#ef6f9a"/>
+          </linearGradient>
+        </defs>
+        <rect x="30" y="34" width="300" height="190" rx="16" fill="#fff" opacity="0.96"/>
+        <rect x="30" y="34" width="300" height="34" rx="16" fill="url(#g1)"/>
+        <circle cx="50" cy="51" r="4" fill="#ff7b7b"/>
+        <circle cx="64" cy="51" r="4" fill="#ffd166"/>
+        <circle cx="78" cy="51" r="4" fill="#59d1c8"/>
+        <rect x="48" y="84" width="120" height="9" rx="4.5" fill="#d8dcf0"/>
+        <rect x="48" y="102" width="86" height="7" rx="3.5" fill="#e7e9f6"/>
+        <rect x="48" y="126" width="262" height="76" rx="10" fill="#f3f5ff"/>
+        <path d="M172 146l30 18-30 18z" fill="url(#g2)"/>
+        <rect x="48" y="150" width="88" height="6" rx="3" fill="#dfe3f3"/>
+        <rect x="48" y="166" width="60" height="6" rx="3" fill="#e7e9f6"/>
+        <rect x="250" y="140" width="60" height="52" rx="8" fill="#fff" stroke="#e2e5f0"/>
+        <rect x="258" y="150" width="44" height="5" rx="2.5" fill="#cfd5ea"/>
+        <rect x="258" y="162" width="34" height="5" rx="2.5" fill="#e3e7f4"/>
+        <rect x="258" y="174" width="40" height="5" rx="2.5" fill="#e3e7f4"/>
+        <g>
+          <rect x="228" y="228" width="160" height="44" rx="12" fill="#fff" stroke="#e2e5f0"/>
+          <circle cx="252" cy="250" r="8" fill="#59d1c8"/>
+          <rect x="268" y="241" width="92" height="7" rx="3.5" fill="#d8dcf0"/>
+          <rect x="268" y="254" width="66" height="6" rx="3" fill="#e7e9f6"/>
+        </g>
+        <g>
+          <rect x="20" y="232" width="168" height="40" rx="12" fill="#fff" stroke="#e2e5f0"/>
+          <rect x="34" y="245" width="10" height="14" rx="2" fill="url(#g2)"/>
+          <rect x="52" y="244" width="104" height="7" rx="3.5" fill="#d8dcf0"/>
+          <rect x="52" y="257" width="76" height="6" rx="3" fill="#e7e9f6"/>
+        </g>
+      </svg>
+      <div class="hero-badge">本周<b>6 部</b>番剧进入完结话</div>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+  <main class="main-col">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Season Overview</span>
+          <h2>2026 秋季番播出结构与题材分布</h2>
+        </div>
+        <span class="sub">统计口径：含 10 月新番 32 部、跨季续播 10 部</span>
+      </div>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <span class="num">32 部</span>
+          <h3>10 月新番开播</h3>
+          <p>新作原作占比 56%，其中轻小说改编 11 部、原创 6 部，剩下为漫画与游戏改编。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">10 部</span>
+          <h3>跨季续播</h3>
+          <p>7 月档延续下来的《岚间测绘局》《深夜面包房》等，话数已过半。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">6 部</span>
+          <h3>本周完结话</h3>
+          <p>短篇季度番集中在 12 话，11 月 6 日至 8 日三天内放出 6 个最终回。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">9 部</span>
+          <h3>剧场版上线</h3>
+          <p>含 2 部经典重映、3 部新作，其余为合集篇，多数附繁简双字幕。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">4 档</span>
+          <h3>播出时段分布</h3>
+          <p>深夜 24:00—26:00 占 61%，晨间档 4 部，晚间黄金档仅 2 部。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">1—48h</span>
+          <h3>字幕上线差</h3>
+          <p>正版平台平均 1—3 小时，个人字幕组 6—48 小时，冷门番更久。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 精选推荐 -->
+    <section class="block" id="featured">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Editors' Pick</span>
+          <h2>精选推荐：本周值得先看的三部</h2>
+        </div>
+        <span class="sub">按话数进度与作画稳定性挑选</span>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-main">
+          <img src="https://picsum.photos/seed/huadu-canglan/720/380" width="720" height="380" loading="lazy" alt="《苍岚纪行》雪山测绘队的远景构图">
+          <div class="feature-body">
+            <h3>苍岚纪行：测绘队番剧里的地理细节</h3>
+            <p>第 6 话把等高线、磁偏角修正搬进了主角对话，制作组在片尾附了取景地对照。前三话节奏偏慢，第 4 话开始把队员分工讲透，适合喜欢慢热群像的观众。</p>
+            <div class="tag-row">
+              <span class="tag">连载至第 6 话</span>
+              <span class="tag teal">周日晚 22:40</span>
+              <span class="tag warm">群像 / 地理</span>
+            </div>
+          </div>
+        </article>
+        <div class="feature-side">
+          <div class="side-card">
+            <h3>旅町食堂 第二季</h3>
+            <p>单元剧结构，每话一道地方菜，第 5 话的腌笃鲜段落被弹幕单独剪出来讨论。</p>
+            <div class="tag-row"><span class="tag teal">BD 修订轴已出</span></div>
+            <div class="meta">更新至第 5 话 · 每周六</div>
+          </div>
+          <div class="side-card">
+            <h3>夜行电波塔</h3>
+            <p>原创科幻，前两话用广播剧形式铺设定。第 3 话起转向调查线，作画在第 5 话有明显补帧。</p>
+            <div class="tag-row"><span class="tag warm">原创</span><span class="tag">悬念向</span></div>
+            <div class="meta">更新至第 5 话 · 每周四</div>
+          </div>
+          <div class="side-card">
+            <h3>补番包：三月的纸鸢</h3>
+            <p>2025 年完结，全 13 话。适合一次看完，配乐在第 9 话的留白处理值得单独留意。</p>
+            <div class="tag-row"><span class="tag">完结 / 13 话</span></div>
+            <div class="meta">补番包 11 月 7 日整理</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="latest">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Update Log</span>
+          <h2>最新更新：11 月 6 日至 8 日排片</h2>
+        </div>
+        <span class="sub">时间均为北京时间</span>
+      </div>
+      <ul class="update-list">
+        <li class="update-item">
+          <div class="update-time"><b>11-08</b>今天</div>
+          <div>
+            <div class="update-title"><a href="/#deepdive">苍岚纪行 第 6 话</a></div>
+            <p class="update-desc">简体字幕 22:40 上线，片尾新增取景地对照表。</p>
+          </div>
+          <span class="update-ep">第 6 话</span>
+        </li>
+        <li class="update-item">
+          <div class="update-time"><b>11-08</b>今天</div>
+          <div>
+            <div class="update-title"><a href="/#featured">旅町食堂 第二季 第 5 话</a></div>
+            <p class="update-desc">BD 修订轴替换 TV 放送版，补回 42 秒厨房长镜头。</p>
+          </div>
+          <span class="update-ep">第 5 话</span>
+        </li>
+        <li class="update-item">
+          <div class="update-time"><b>11-07</b>昨天</div>
+          <div>
+            <div class="update-title"><a href="/#news">夜行电波塔 第 5 话</a></div>
+            <p class="update-desc">调查线首次出现时间跳跃，官方推特同步放出年表图。</p>
+          </div>
+          <span class="update-ep">第 5 话</span>
+        </li>
+        <li class="update-item">
+          <div class="update-time"><b>11-07</b>昨天</div>
+          <div>
+            <div class="update-title"><a href="/#rank">深夜面包房 第 8 话</a></div>
+            <p class="update-desc">跨季续播进度过半，本话起更换片头曲。</p>
+          </div>
+          <span class="update-ep">第 8 话</span>
+        </li>
+        <li class="update-item">
+          <div class="update-time"><b>11-06</b>周五</div>
+          <div>
+            <div class="update-title"><a href="/#channels">岚间测绘局 第 11 话</a></div>
+            <p class="update-desc">临近最终话，制作组公布全 12 话话数安排。</p>
+          </div>
+          <span class="update-ep">第 11 话</span>
+        </li>
+        <li class="update-item">
+          <div class="update-time"><b>11-06</b>周五</div>
+          <div>
+            <div class="update-title"><a href="/#guide">纸鸢与电车 完结话</a></div>
+            <p class="update-desc">全 12 话完结，字幕组同步发出合集种子说明。</p>
+          </div>
+          <span class="update-ep">完结</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="channels">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Channels</span>
+          <h2>分类入口：按题材与需求找番</h2>
+        </div>
+        <span class="sub">括号内为本季收录条目数</span>
+      </div>
+      <div class="channel-index">
+        <a href="/#overview">当季新番同步 <span class="cnt">32</span></a>
+        <a href="/#rank">完结补番包 <span class="cnt">18</span></a>
+        <a href="/#featured">剧场版与合集 <span class="cnt">9</span></a>
+        <a href="/#deepdive">群像群剧 <span class="cnt">11</span></a>
+        <a href="/#deepdive">悬疑调查线 <span class="cnt">8</span></a>
+        <a href="/#guide">日常治愈单元剧 <span class="cnt">14</span></a>
+        <a href="/#channels">轻小说改编 <span class="cnt">17</span></a>
+        <a href="/#channels">原创动画 <span class="cnt">6</span></a>
+        <a href="/#channels">漫画改编 <span class="cnt">13</span></a>
+        <a href="/#channels">游戏改编 <span class="cnt">4</span></a>
+        <a href="/#latest">短篇季度番（12 话） <span class="cnt">21</span></a>
+        <a href="/#latest">半年番与跨季续播 <span class="cnt">10</span></a>
+        <a href="/#guide">双语字幕对照 <span class="cnt">7</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deepdive">
+      <article class="article-card">
+        <h2>深度解析：同步番的字幕差，正在决定补番顺序</h2>
+        <p class="article-lead">一个可被反驳的判断：2026 年秋季番里，观众选择先看哪一部，越来越受“字幕上线速度”影响，而不是作品本身的话数质量。反过来说，如果字幕差在 48 小时内被抹平，追番顺序会重新回到剧情口碑上。</p>
+
+        <h3>证据一：三部番的上线时间差可核对</h3>
+        <p>以 11 月 6 日至 8 日的排片为例，《苍岚纪行》第 6 话在日本首播为 11 月 8 日 23:30，简体字幕 22:40 上线，实际上比日本放送还早，属于平台提前放送。而《夜行电波塔》第 5 话日本 11 月 7 日 25:10 播出，个人字幕组版本在 11 月 8 日 09:20 才出现，差 8 小时 10 分。</p>
+        <div class="factbox">
+          <table>
+            <caption style="text-align:left;font-size:12.5px;color:#6a7090;padding-bottom:6px">11 月 6 日—8 日字幕上线对照</caption>
+            <tr><th>作品</th><th>首播时间</th><th>正版字幕</th><th>字幕组版本</th></tr>
+            <tr><td>苍岚纪行 第 6 话</td><td>11-08 23:30</td><td>11-08 22:40</td><td>11-09 凌晨</td></tr>
+            <tr><td>夜行电波塔 第 5 话</td><td>11-07 25:10</td><td>11-08 01:00</td><td>11-08 09:20</td></tr>
+            <tr><td>旅町食堂 第二季 第 5 话</td><td>11-07 24:00</td><td>11-08 10:30</td><td>BD 轴 11-08 16:00</td></tr>
+          </table>
+        </div>
+        <p>这组对比说明一件事：正版平台与个人字幕组之间的时间差并不稳定，同一周内可以相差不到 1 小时，也可以超过 8 小时。把“字幕快慢”当成固定属性去推荐番剧，证据不足。</p>
+
+        <h3>证据二：口径差异让评分看起来更分裂</h3>
+        <p>《岚间测绘局》第 11 话在两家评分站出现 8.1 与 7.2 的分差。翻查打分构成：8.1 那家把“作画分”单列，权重占 25%；7.2 那家把“剧本完成度”权重提到 40%。同一话内容，两套权重算出两个结论，属于口径差异，不属于观众分裂。</p>
+        <div class="quote-card">
+          <p>把评分口径写清楚，比多刷一个满分更有用。观众能核对的是权重表，不是情绪。</p>
+        </div>
+
+        <h3>证据三：续作顺序的规则前后有变化</h3>
+        <p>《深夜面包房》第二季第 1 话直接在片头用 40 秒回顾第一季结局，第一季观众可以跳过回顾段；但第 8 话更换片头曲时，把第一季的角色关系图重新放了一遍。制作组在 11 月 7 日的官方说明里承认，这是为了让跨季续播的新观众跟上进度。</p>
+        <p>也就是说，“续作必须补前作”这条经验，在这一部上只对了一半：前 7 话可以靠片头回顾理解，第 8 话之后需要补第一季第 9 至 12 话，否则角色动机断裂。判断能否跳看，要看具体话数安排，而不是看作品新旧。</p>
+
+        <h3>反方意见：字幕差被高估了</h3>
+        <p>另一种说法是，字幕差只影响“第一时间讨论”，不影响“最终补番”。这个说法有道理，因为完结后字幕组会统一出合集，时间差被抹平。但它忽略了同期社群讨论的窗口：一部番的梗图、二创、直播弹幕，在播出后 48 小时内最密集。错过了，补番时的信息环境已经不同。</p>
+        <p>两种说法可以并存。可核对的做法是：把“是否要赶同步讨论”和“是否要按顺序补完”拆成两个问题，分别记录上线时间与话数进度，不混成一个“值不值得追”的总判断。</p>
+      </article>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">How to Watch</span>
+          <h2>体验指南：按顺序核对再开看</h2>
+        </div>
+        <span class="sub">四步，每步都有可核对项</span>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>先确认话数安排</h3>
+          <p>查官方话数表：12 话季度番与 24 话半年番的节奏完全不同，前者在第 8 话前后进入收束，后者中段常有独立支线。</p>
+        </li>
+        <li>
+          <h3>再看前作依赖度</h3>
+          <p>单元剧可直接跳看，连续剧情先补前作。《深夜面包房》第二季第 8 话之后需补第一季第 9 至 12 话，这是制作组 11 月 7 日说明里写明的。</p>
+        </li>
+        <li>
+          <h3>核对字幕版本与时间轴</h3>
+          <p>TV 放送版与 BD 修订轴在台词上有差别，专有名词译名可能不统一。补番时优先选标注了修订日期的版本。</p>
+        </li>
+        <li>
+          <h3>决定追同步还是等合集</h3>
+          <p>要参与当期讨论，就按上线时间排；只想看完故事，等完结合集更省心。《纸鸢与电车》的合集在完结后 3 天放出，比逐话追省 5 次切换。</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">FAQ</span>
+          <h2>番剧与字幕相关的常见问题</h2>
+        </div>
+        <span class="sub">回答以领域对象为主语</span>
+      </div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>当季新番通常周几更新？</summary>
+          <div class="faq-body">日本深夜档多在周一至周日 00:00 至 02:00 前后首播，国内平台字幕版一般延后 1 到 3 小时上线，上午 10 点前基本能看到当天全部排片。</div>
+        </details>
+        <details class="faq">
+          <summary>同一部番 TV 版和 BD 版字幕有差别吗？</summary>
+          <div class="faq-body">有。TV 放送版受时长限制，部分台词会在 BD 版补回，字幕组多在 BD 发售后的两周内出修订轴，涉及专有名词译名统一。《旅町食堂》第二季第 5 话的修订轴就补回了 42 秒厨房长镜头。</div>
+        </details>
+        <details class="faq">
+          <summary>续作没看过前作能直接追吗？</summary>
+          <div class="faq-body">单元剧结构可以直接看，比如《夏目友人帐》每集独立；连续剧情作品如《进击的巨人》最终季则必须先补前作，否则人物动机无法成立。《深夜面包房》第二季介于两者之间，前 7 话可跳，第 8 话起需补第一季后半。</div>
+        </details>
+        <details class="faq">
+          <summary>剧场版和 TV 版之间有必看顺序吗？</summary>
+          <div class="faq-body">分两种情况。原创剧场版多为独立故事，如《你的名字。》；而《鬼灭之刃》无限列车篇插在 TV 第一季与第二季之间，顺序错开会丢失关键设定。</div>
+        </details>
+        <details class="faq">
+          <summary>字幕组的更新时间为什么比平台晚？</summary>
+          <div class="faq-body">个人字幕组需要完成翻译、校对、时间轴、压制四道工序，通常比正版平台晚 6 到 48 小时，冷门番可能更久。《夜行电波塔》第 5 话的字幕组版本比正版晚 8 小时 10 分。</div>
+        </details>
+        <details class="faq">
+          <summary>怎么判断一部番值不值得先追？</summary>
+          <div class="faq-body">看前三话是否完成主角目标设定、是否有明确冲突、作画是否稳定。三话后仍靠悬念撑场面的作品，弃番成本反而更低。</div>
+        </details>
+        <details class="faq">
+          <summary>想看双语字幕对照，该选哪类版本？</summary>
+          <div class="faq-body">双字幕通常由个人字幕组在正片下方加日文原句，适合核对专有名词。本季标注双语的字幕版本有 7 个，集中在群像与悬疑两类作品。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Comments</span>
+          <h2>观众评论：具体条目上的分歧</h2>
+        </div>
+        <span class="sub">按 11 月 6 日至 8 日整理</span>
+      </div>
+      <div class="comment-list">
+        <div class="comment">
+          <div class="comment-head">
+            <span class="avatar c1">竹</span>
+            <span class="comment-name">竹井的自行车</span>
+            <span class="comment-meta">11-08 22:12</span>
+          </div>
+          <p>《苍岚纪行》第 6 话的等高线段落我重看了三遍，制作组把磁偏角修正画成对话，比直接念设定强太多。唯一想吐槽的是主角念数据时的语速，快得像在赶末班车。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head">
+            <span class="avatar c2">橙</span>
+            <span class="comment-name">橙子汽水不加冰</span>
+            <span class="comment-meta">11-08 19:40</span>
+          </div>
+          <p>《旅町食堂》第二季第 5 话的腌笃鲜那段，BD 修订轴的厨房长镜头补回来后，火候的节奏终于对了。TV 版剪掉那 42 秒，整道菜的变化都看不出来。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head">
+            <span class="avatar c3">风</span>
+            <span class="comment-name">风间读数</span>
+            <span class="comment-meta">11-08 14:05</span>
+          </div>
+          <p>《夜行电波塔》第 5 话叙事跳得太突然，年表图放在官方账号上，正片里只有两秒闪回。对一部原创番来说，这种依赖外链补设定的做法挺冒险。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head">
+            <span class="avatar c4">木</span>
+            <span class="comment-name">木漏れ日</span>
+            <span class="comment-meta">11-07 23:31</span>
+          </div>
+          <p>《岚间测绘局》第 11 话的分差我能理解。8.1 那家把作画分单列，7.2 那家更看重剧本完成度，这一话确实作画稳但结尾收得急。评分站不如把权重表直接摆出来。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head">
+            <span class="avatar c5">阿</span>
+            <span class="comment-name">阿七不熬夜</span>
+            <span class="comment-meta">11-07 20:18</span>
+          </div>
+          <p>《深夜面包房》第二季第 8 话换片头曲后，把第一季角色关系图又放了一遍，新观众是跟上了，老观众有点被重复喂设定。制作组的说明写得客气，但这段确实拖节奏。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head">
+            <span class="avatar c1">松</span>
+            <span class="comment-name">松果壳</span>
+            <span class="comment-meta">11-06 21:52</span>
+          </div>
+          <p>《纸鸢与电车》完结话的收尾挺克制的，没有硬塞大团圆。12 话刚好，再长就得注水。字幕组合集说明里写了漏译修正三条，这种标注习惯值得学。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">News</span>
+          <h2>相关资讯：排片、版本与官方说明</h2>
+        </div>
+        <span class="sub">日期均为 11 月 6 日至 8 日</span>
+      </div>
+      <div class="news-grid">
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/huadu-news1/176/132" width="176" height="132" loading="lazy" alt="深夜档排片表与时钟插画">
+          <div>
+            <span class="date">11-08</span>
+            <h3><a href="/#latest">深夜档 11 月第二周排片调整</a></h3>
+            <p>周五两档顺延 15 分钟，涉及三部作品。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/huadu-news2/176/132" width="176" height="132" loading="lazy" alt="BD 修订轴与字幕时间轴示意">
+          <div>
+            <span class="date">11-08</span>
+            <h3><a href="/#faq">旅町食堂 BD 修订轴放出</a></h3>
+            <p>补回 42 秒镜头，翻译同步更新译名。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/huadu-news3/176/132" width="176" height="132" loading="lazy" alt="官方账号发布的年表图示意图">
+          <div>
+            <span class="date">11-07</span>
+            <h3><a href="/#comments">夜行电波塔官方放出年表图</a></h3>
+            <p>补全时间跳跃的角色坐标，正片只闪回两秒。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/huadu-news4/176/132" width="176" height="132" loading="lazy" alt="评分权重表与打分构成图">
+          <div>
+            <span class="date">11-07</span>
+            <h3><a href="/#rank">两家评分站权重差异被讨论</a></h3>
+            <p>作画与剧本权重不同，同话分差 0.9。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 口碑榜补充板块 -->
+    <section class="block" id="rank">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Ranking</span>
+          <h2>口碑榜：本季前六的完成度分层</h2>
+        </div>
+        <span class="sub">按前三话设定完成度排序，非热度</span>
+      </div>
+      <ol class="rank-list">
+        <li class="rank-item">
+          <span class="rank-no">1</span>
+          <div class="rank-body">
+            <h3>苍岚纪行</h3>
+            <p>前三话完成主角目标、队伍分工与地理设定的三层铺垫，第 6 话仍稳定。</p>
+          </div>
+          <span class="rank-score">9.1</span>
+        </li>
+        <li class="rank-item">
+          <span class="rank-no">2</span>
+          <div class="rank-body">
+            <h3>旅町食堂 第二季</h3>
+            <p>单元剧结构成熟，BD 修订轴补回关键镜头后完成度上升。</p>
+          </div>
+          <span class="rank-score">8.8</span>
+        </li>
+        <li class="rank-item">
+          <span class="rank-no">3</span>
+          <div class="rank-body">
+            <h3>纸鸢与电车</h3>
+            <p>12 话收束干净，结尾克制，适合一次补完。</p>
+          </div>
+          <span class="rank-score">8.6</span>
+        </li>
+        <li class="rank-item">
+          <span class="rank-no">4</span>
+          <div class="rank-body">
+            <h3>深夜面包房 第二季</h3>
+            <p>前 7 话可跳看，第 8 话角色关系图重复放送，节奏略拖。</p>
+          </div>
+          <span class="rank-score">8.2</span>
+        </li>
+        <li class="rank-item">
+          <span class="rank-no">5</span>
+          <div class="rank-body">
+            <h3>岚间测绘局</h3>
+            <p>作画稳定，第 11 话收尾偏急，剧本完成度被评分站拉开差距。</p>
+          </div>
+          <span class="rank-score">8.0</span>
+        </li>
+        <li class="rank-item">
+          <span class="rank-no">6</span>
+          <div class="rank-body">
+            <h3>夜行电波塔</h3>
+            <p>原创设定有野心，但第 5 话依赖外链年表补设定，正片自洽度不足。</p>
+          </div>
+          <span class="rank-score">7.7</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 11 相关推荐 -->
+    <section class="block" id="recommend">
+      <div class="block-head">
+        <div>
+          <span class="sec-kicker">Related</span>
+          <h2>相关推荐：换个词继续找</h2>
+        </div>
+        <span class="sub">按题材、版本、进度拆分</span>
+      </div>
+      <div class="rec-tags">
+        <a href="/#overview">2026 秋季新番表</a>
+        <a href="/#rank">完结补番包清单</a>
+        <a href="/#featured">剧场版合集字幕版</a>
+        <a href="/#deepdive">群像剧推荐</a>
+        <a href="/#deepdive">悬疑调查线番剧</a>
+        <a href="/#guide">日常治愈单元剧</a>
+        <a href="/#channels">轻小说改编作品</a>
+        <a href="/#channels">原创动画年度盘点</a>
+        <a href="/#latest">12 话短篇季度番</a>
+        <a href="/#faq">BD 修订轴字幕</a>
+        <a href="/#guide">双语字幕对照版本</a>
+        <a href="/#comments">深夜档排片时间</a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="side-col" aria-label="侧栏">
+    <div class="side-panel">
+      <h2>栏目导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#featured">精选推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deepdive">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">观众评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">口碑榜</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="side-panel">
+      <h2>本周可核对项</h2>
+      <ul class="mini-timeline">
+        <li><span class="t">11-08</span><span>苍岚纪行第 6 话，22:40 简体字幕</span></li>
+        <li><span class="t">11-08</span><span>旅町食堂 BD 修订轴替换完成</span></li>
+        <li><span class="t">11-07</span><span>深夜面包房第二季第 8 话换片头曲</span></li>
+        <li><span class="t">11-07</span><span>夜行电波塔官方年表图放出</span></li>
+        <li><span class="t">11-06</span><span>纸鸢与电车全 12 话完结</span></li>
+      </ul>
+    </div>
+    <div class="side-panel">
+      <h2>字幕版本说明</h2>
+      <p class="side-note">站内条目标注的“正版”“字幕组”“BD 修订轴”分别指代不同版本来源。<strong>BD 修订轴</strong>通常补回 TV 放送删减镜头，译名可能调整；<strong>双语对照</strong>适合核对专有名词。选版本前先确认是否标注修订日期。</p>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#3f47a3"/>
+          <path d="M20 18l26 14-26 14z" fill="#ffb020"/>
+          <circle cx="48" cy="20" r="5" fill="#59d1c8"/>
+        </svg>
+        <span class="brand-text">花都动漫在线观看</span>
+      </div>
+      <p class="footer-pos">按播出季整理番剧清单，标注话数进度、字幕版本与上线时间，方便对照排片与补番顺序。</p>
+    </div>
+    <div class="footer-col">
+      <h3>找番</h3>
+      <ul>
+        <li><a href="/#overview">当季新番同步表</a></li>
+        <li><a href="/#rank">完结补番包</a></li>
+        <li><a href="/#featured">剧场版与合集</a></li>
+        <li><a href="/#latest">12 话短篇季度番</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>按题材</h3>
+      <ul>
+        <li><a href="/#channels">群像群剧</a></li>
+        <li><a href="/#channels">悬疑调查线</a></li>
+        <li><a href="/#guide">日常治愈单元剧</a></li>
+        <li><a href="/#channels">轻小说改编</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>使用说明</h3>
+      <ul>
+        <li><a href="/#guide">追番顺序核对步骤</a></li>
+        <li><a href="/#faq">字幕版本常见问题</a></li>
+        <li><a href="/#deepdive">字幕差与评分口径</a></li>
+        <li><a href="/#comments">观众条目评论</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>条目、评分与更新时间为示例数据，按 2026-11-07 至 2026-11-08 口径整理，实际以官方发布为准。</p>
+    <p>更新时间：2026-11-08 · 对应正文更新日历与本周可核对项</p>
+  </div>
+  <div class="footer-bottom" style="border-top:0;padding-top:0">
+    <p>© 2026 花都动漫在线观看 · 内容整理与栏目维护</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" type="button">↑</button>
+
+<script>
+(function(){
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  var toTop = document.getElementById('toTop');
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){ return document.querySelector(a.getAttribute('href').replace('/#','#')); }).filter(Boolean);
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.focus();
+      }
+    });
+  }
+
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 420) { toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+
+    var pos = window.scrollY + 150;
+    var current = null;
+    sections.forEach(function(s){
+      if (s.offsetTop <= pos) { current = s.id; }
+    });
+    sideLinks.forEach(function(a){
+      if (a.getAttribute('href') === '/#' + current) { a.classList.add('active'); }
+      else { a.classList.remove('active'); }
+    });
+  }, {passive:true});
+
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  if (form && input && feedback) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim().toLowerCase();
+      if (!q) { feedback.textContent = '输入番剧名或字幕组名称再查找。'; return; }
+      var hits = [];
+      var nodes = document.querySelectorAll('h1,h2,h3,summary,li p,a');
+      Array.prototype.forEach.call(nodes, function(n){
+        var text = (n.textContent || '').toLowerCase();
+        if (text.indexOf(q) !== -1) {
+          var title = n.textContent.trim().replace(/\s+/g,' ');
+          if (title.length > 46) { title = title.slice(0,46) + '…'; }
+          if (title && hits.indexOf(title) === -1) { hits.push(title); }
+        }
+      });
+      if (hits.length === 0) {
+        feedback.textContent = '没有找到与“' + input.value.trim() + '”匹配的条目，换个关键词试试。';
+      } else {
+        feedback.textContent = '找到 ' + hits.length + ' 条相关：' + hits.slice(0,4).join(' ｜ ');
+      }
+    });
+  }
+})();
+</script>
+</body>
+  </html>
