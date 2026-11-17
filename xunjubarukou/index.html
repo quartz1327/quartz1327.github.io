@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>寻剧吧入口-剧集导航与观影指南</title>
+<meta name="description" content="寻剧吧入口提供剧集导航与观影指南，整理2026年11月更新的国产剧、韩剧、美剧、日漫与纪录片入口，含分集更新表、找剧避坑规则和观众实测评论，帮助按类型、年份和平台快速定位可看内容。">
+<meta name="keywords" content="寻剧吧入口">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2438'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23e8b04b' stroke-width='4'/%3E%3Cpath d='M27 23l16 9-16 9z' fill='%23e8b04b'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"寻剧吧入口","description":"剧集导航与观影指南","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"寻剧吧入口找不到某部剧怎么办？","acceptedAnswer":{"@type":"Answer","text":"先确认剧名是原名还是译名，2026年11月多部韩剧在引进时改名，搜索旧名会落空。再用“年份+类型”组合检索，例如“2026 悬疑 国产剧”，命中率比单词检索高。"}},
+{"@type":"Question","name":"分集更新时间表以哪个为准？","acceptedAnswer":{"@type":"Answer","text":"以平台片方公告为准。卫视联播剧通常19:35首播、22:00后上线，纯网剧多为12:00或18:00更新，会员抢先看会提前1至2天，时间表按平台实际更新校准。"}},
+{"@type":"Question","name":"韩剧、美剧的字幕版本差异大吗？","acceptedAnswer":{"@type":"Answer","text":"差异明显。同一部剧不同字幕组对专有名词译法不同，法律剧《检察官笔记》里“구속”有的译“羁押”，有的译“拘留”，追剧中途换源容易断剧情，建议固定一个版本看完整季。"}},
+{"@type":"Question","name":"纪录片入口为什么单独分类？","acceptedAnswer":{"@type":"Answer","text":"纪录片更新周期不固定，多为整季上线或按周更，和日更剧集节奏不同。按季集数、旁白语言、播放平台单独归档，能减少无效刷新。"}},
+{"@type":"Question","name":"剧集入口链接失效如何处理？","acceptedAnswer":{"@type":"Answer","text":"入口失效常见于版权到期或平台调整栏目。优先回分类页按类型重新找，平台正版片库一般在片名页面下方提供同系列推荐，比直接搜旧链接稳定。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#1b2438;
+  --ink-soft:#3a4459;
+  --muted:#697386;
+  --line:#dfe3ec;
+  --paper:#f6f7fb;
+  --card:#ffffff;
+  --brand:#1b2438;
+  --gold:#c99336;
+  --gold-soft:#f4e8cf;
+  --rose:#a8433f;
+  --teal:#2c6e6a;
+  --radius:12px;
+  --radius-s:8px;
+  --shadow:0 4px 16px rgba(27,36,56,.07);
+  --shadow-h:0 8px 22px rgba(27,36,56,.12);
+  --gap:20px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --fs-h1:clamp(1.7rem,3.4vw,2.6rem);
+  --fs-h2:clamp(1.2rem,2vw,1.5rem);
+  --fs-h3:1rem;
+  --bar-h:38px;
+  --head-h:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar-h) + var(--head-h) + 14px)}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;
+}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+h1,h2,h3{line-height:1.35;margin:0}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+p{margin:0}
+.section{padding:34px 0;border-top:1px solid var(--line)}
+.section:first-of-type{border-top:0}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.sec-head h2{color:var(--brand)}
+.sec-desc{color:var(--muted);font-size:.9rem}
+
+/* 吸顶公告条 */
+.notice{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(90deg,#1b2438,#2b3a55);
+  color:#e9edf6;font-size:.82rem;height:var(--bar-h);
+  display:flex;align-items:center;overflow:hidden;
+}
+.notice .wrap{display:flex;align-items:center;gap:10px;white-space:nowrap;overflow:hidden}
+.notice b{color:var(--gold);font-weight:600;letter-spacing:.02em}
+.notice span{overflow:hidden;text-overflow:ellipsis}
+.notice a{color:#ffd98d;border-bottom:1px dotted #ffd98d;flex-shrink:0}
+.notice a:hover{color:#fff}
+
+/* 页头 */
+.head{
+  position:sticky;top:var(--bar-h);z-index:55;background:rgba(255,255,255,.97);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
+}
+.head-in{display:flex;align-items:center;gap:16px;height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.06rem;letter-spacing:.01em;color:var(--brand);flex-shrink:0}
+.brand svg{width:34px;height:34px}
+.brand small{display:block;font-size:.62rem;letter-spacing:.18em;color:var(--muted);font-weight:500}
+.nav{display:flex;gap:4px;margin-left:auto;align-items:center;flex-wrap:nowrap}
+.nav a{
+  font-size:.88rem;padding:6px 10px;color:var(--ink-soft);border-radius:6px;white-space:nowrap;
+}
+.nav a:hover{background:var(--gold-soft);color:var(--brand)}
+.nav .ent{background:var(--brand);color:#fff;padding:6px 14px}
+.nav .ent:hover{background:#2b3a55;color:#fff}
+.menu-btn{
+  display:none;margin-left:auto;background:var(--brand);color:#fff;border:0;
+  padding:8px 14px;border-radius:8px;font-size:.86rem;cursor:pointer;font-family:var(--font);
+}
+.search{margin-left:auto;display:flex;align-items:center;gap:6px}
+.search input{
+  width:170px;padding:6px 10px;border:1px solid var(--line);border-radius:20px;
+  font-family:var(--font);font-size:.85rem;background:#fbfbfd;
+}
+.search button{
+  background:var(--brand);color:#fff;border:0;border-radius:20px;padding:7px 14px;
+  font-size:.83rem;cursor:pointer;font-family:var(--font);
+}
+.search button:hover{background:#2b3a55}
+.search-msg{font-size:.78rem;color:var(--rose);position:absolute;top:100%;right:16px;background:#fff;padding:2px 10px;border-radius:6px;box-shadow:var(--shadow)}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(1100px 380px at 85% -10%,rgba(201,147,54,.16),transparent 65%),
+    radial-gradient(700px 300px at 0% 110%,rgba(44,110,106,.12),transparent 60%),
+    #fff;
+  padding:44px 0 40px;overflow:hidden;
+}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:.76rem;letter-spacing:.14em;
+  color:var(--gold);border:1px solid var(--gold);border-radius:30px;padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{font-size:var(--fs-h1);color:var(--brand);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-lead{margin-top:16px;color:var(--ink-soft);font-size:.98rem;max-width:36em}
+.hero-stats{display:flex;gap:26px;margin-top:24px;flex-wrap:wrap}
+.hero-stats div{font-size:.8rem;color:var(--muted)}
+.hero-stats strong{display:block;font-size:1.5rem;color:var(--brand);line-height:1.2}
+.hero-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:10px 22px;border-radius:8px;font-size:.9rem;font-weight:600;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink-soft);background:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--brand);transform:translateY(-2px)}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* 通用卡片 */
+.grid{display:grid;gap:var(--gap)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease;
+  display:flex;flex-direction:column;gap:10px;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.card h3{color:var(--brand)}
+.card p{font-size:.89rem;color:var(--ink-soft)}
+.meta{font-size:.76rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.pill{
+  display:inline-block;font-size:.72rem;padding:2px 9px;border-radius:20px;
+  background:var(--gold-soft);color:#7a5a17;white-space:nowrap;
+}
+.pill.teal{background:#dcefee;color:var(--teal)}
+.pill.rose{background:#f6e2e1;color:var(--rose)}
+.card a.more{font-size:.83rem;color:var(--gold);font-weight:600;margin-top:auto}
+.card a.more:hover{text-decoration:underline}
+
+/* 领域概览 */
+.overview{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;box-shadow:var(--shadow);
+}
+.overview p{font-size:.94rem;color:var(--ink-soft);margin-bottom:12px}
+.overview ul{margin:0;padding-left:18px;font-size:.9rem;color:var(--ink-soft)}
+.overview li{margin-bottom:6px}
+.overview li b{color:var(--brand)}
+.ov-side{background:var(--paper);border-radius:var(--radius-s);padding:16px;font-size:.85rem}
+.ov-side h3{margin-bottom:10px;color:var(--brand);font-size:.94rem}
+.ov-side dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.ov-side dt{color:var(--muted)}
+.ov-side dd{margin:0;color:var(--ink-soft);font-weight:600}
+
+/* 紧凑列表 */
+.tlist{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.tlist li{
+  list-style:none;display:grid;grid-template-columns:56px 1fr auto;gap:14px;align-items:center;
+  padding:13px 18px;border-bottom:1px solid var(--line);font-size:.9rem;
+}
+.tlist li:last-child{border-bottom:0}
+.tlist li:hover{background:#fdfaf3}
+.tlist time{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tlist .t-main b{color:var(--brand);font-weight:600}
+.tlist .t-main span{display:block;font-size:.79rem;color:var(--muted)}
+.tlist .tag{font-size:.72rem;color:var(--teal);border:1px solid #cfe3e1;border-radius:6px;padding:1px 7px;white-space:nowrap}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat{
+  display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:14px 16px;transition:transform .16s ease,border-color .16s ease;
+}
+.cat:hover{transform:translateY(-2px);border-color:var(--gold)}
+.cat strong{display:block;font-size:.94rem;color:var(--brand)}
+.cat span{font-size:.77rem;color:var(--muted)}
+
+/* 双栏正文 */
+.split{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
+.deep{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);
+}
+.deep h3{margin:24px 0 10px;color:var(--brand);padding-left:12px;border-left:4px solid var(--gold)}
+.deep h3:first-of-type{margin-top:8px}
+.deep p{font-size:.93rem;color:var(--ink-soft);margin-bottom:12px}
+.deep .quote{
+  border-left:3px solid var(--rose);background:#fdf6f5;padding:12px 16px;font-size:.9rem;
+  color:#5c2f2d;border-radius:0 var(--radius-s) var(--radius-s) 0;margin:14px 0;
+}
+.check{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:14px 16px;font-size:.87rem;margin:12px 0;
+}
+.check b{color:var(--brand)}
+.check ol{margin:8px 0 0;padding-left:18px;color:var(--ink-soft)}
+.check li{margin-bottom:4px}
+.side{display:flex;flex-direction:column;gap:18px;position:sticky;top:calc(var(--bar-h) + var(--head-h) + 16px)}
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.side-card h3{font-size:.94rem;color:var(--brand);margin-bottom:10px}
+.side-nav a{display:block;font-size:.86rem;color:var(--ink-soft);padding:6px 8px;border-radius:6px;border-left:3px solid transparent}
+.side-nav a:hover{background:var(--paper)}
+.side-nav a.active{color:var(--brand);border-left-color:var(--gold);background:var(--gold-soft);font-weight:600}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:st}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+  position:relative;box-shadow:var(--shadow);
+}
+.step::before{
+  counter-increment:st;content:counter(st,decimal-leading-zero);
+  font-size:.78rem;font-weight:700;color:var(--gold);letter-spacing:.08em;
+}
+.step h3{margin:6px 0 8px;font-size:.94rem;color:var(--brand)}
+.step p{font-size:.85rem;color:var(--ink-soft)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.compare>div{padding:20px}
+.compare>div:first-child{border-right:1px solid var(--line);background:#fbfcfe}
+.compare h3{display:flex;align-items:center;gap:8px;font-size:.96rem;margin-bottom:10px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
+.compare ul{margin:0;padding-left:17px;font-size:.87rem;color:var(--ink-soft)}
+.compare li{margin-bottom:7px}
+.compare li b{color:var(--brand)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:0 18px;
+  box-shadow:var(--shadow);
+}
+details[open]{border-color:var(--gold)}
+summary{
+  cursor:pointer;padding:15px 0;font-size:.93rem;font-weight:600;color:var(--brand);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.15rem;line-height:1;flex-shrink:0}
+details[open] summary::after{content:"–"}
+details p{font-size:.89rem;color:var(--ink-soft);padding-bottom:15px}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cmt{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;font-size:.88rem;box-shadow:var(--shadow)}
+.cmt p{color:var(--ink-soft);margin-bottom:10px}
+.cmt footer{font-size:.77rem;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.avatar{width:24px;height:24px;border-radius:50%;background:var(--gold-soft);color:#7a5a17;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
+
+/* 标签索引 */
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags a{
+  font-size:.84rem;border:1px solid var(--line);background:#fff;padding:6px 14px;
+  border-radius:20px;color:var(--ink-soft);transition:all .16s ease;
+}
+.tags a:hover{background:var(--brand);color:#fff;border-color:var(--brand);transform:translateY(-2px)}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 20px 16px;font-size:.89rem;color:var(--ink-soft)}
+.timeline li::before{
+  content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--gold);
+}
+.timeline b{color:var(--brand)}
+.timeline time{display:block;font-size:.76rem;color:var(--muted);margin-bottom:2px}
+
+/* 榜单 */
+.rank{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.rank li{
+  list-style:none;display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;
+  padding:14px 18px;border-bottom:1px solid var(--line);font-size:.9rem;
+}
+.rank li:last-child{border-bottom:0}
+.rank .no{font-weight:700;color:var(--gold);font-size:1.05rem;font-variant-numeric:tabular-nums}
+.rank .r-main b{color:var(--brand)}
+.rank .r-main span{display:block;font-size:.78rem;color:var(--muted)}
+.rank .score{font-size:.8rem;color:var(--teal);font-weight:600}
+
+/* 页脚 */
+.foot{background:var(--brand);color:#c6cedd;margin-top:20px;padding:40px 0 26px;font-size:.87rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.foot h3{color:#fff;font-size:.92rem;margin-bottom:12px}
+.foot p{color:#9dabC4;font-size:.84rem;line-height:1.8}
+.foot a{display:block;color:#c6cedd;padding:3px 0;font-size:.84rem}
+.foot a:hover{color:var(--gold)}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.02rem;margin-bottom:12px}
+.foot-brand svg{width:30px;height:30px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.13);margin-top:30px;padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;color:#8593ad}
+
+/* 回到顶部 */
+.top-btn{
+  position:fixed;right:18px;bottom:22px;z-index:70;width:42px;height:42px;border-radius:50%;
+  background:var(--brand);color:var(--gold);border:1px solid rgba(201,147,54,.5);
+  font-size:1rem;cursor:pointer;display:none;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-h);
+}
+.top-btn.show{display:flex}
+
+/* 响应式 */
+@media (max-width:960px){
+  .hero-in{grid-template-columns:1fr;gap:26px}
+  .hero-art{min-height:auto;max-width:420px}
+  .split{grid-template-columns:1fr}
+  .side{position:static;flex-direction:row;flex-wrap:wrap}
+  .side-card{flex:1 1 260px}
+  .g3,.comments{grid-template-columns:repeat(2,1fr)}
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .overview{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .menu-btn{display:block}
+  .nav{
+    display:none;position:absolute;top:var(--head-h);left:0;right:0;background:#fff;
+    flex-direction:column;align-items:stretch;padding:10px 16px 16px;gap:2px;
+    border-bottom:1px solid var(--line);box-shadow:var(--shadow-h);
+  }
+  .nav.open{display:flex}
+  .nav a{padding:10px 8px;font-size:.92rem}
+  .search{margin-left:0;order:9}
+  .search input{width:120px}
+  .head-in{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px}
+  .head{position:sticky}
+  .g3,.g2,.comments,.steps{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .compare{grid-template-columns:1fr}
+  .compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .tlist li{grid-template-columns:1fr;gap:4px}
+  .tlist time{order:-1}
+  .foot-grid{grid-template-columns:1fr}
+  .deep{padding:20px}
+  .hero-stats{gap:18px}
+  .notice{font-size:.74rem}
+  .top-btn{right:12px;bottom:14px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice" role="region" aria-label="更新公告">
+  <div class="wrap">
+    <b>寻剧吧入口</b>
+    <span>11月7日已同步《风起长安》第18集、《检察官笔记》第9集资源与分集时间表，本周新增纪录片 6 部。</span>
+    <a href="/#updates">查看更新</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="head">
+  <div class="wrap head-in">
+    <a class="brand" href="/#top" aria-label="寻剧吧入口首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b2438"/>
+        <circle cx="32" cy="32" r="19" fill="none" stroke="#e8b04b" stroke-width="4"/>
+        <path d="M27 23l16 9-16 9z" fill="#e8b04b"/>
+      </svg>
+      <span>寻剧吧入口<small>DRAMA INDEX</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">频道菜单</button>
+    <nav class="nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#updates">更新表</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a class="ent" href="/#search">找剧检索</a>
+    </nav>
+    <div class="search" id="search">
+      <input type="search" id="q" placeholder="搜剧名或类型" aria-label="站内剧集搜索">
+      <button type="button" id="searchBtn">查找</button>
+      <span class="search-msg" id="searchMsg" hidden></span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="hero-tag">2026 年 11 月版 · 剧集索引</span>
+        <h1>寻剧吧入口<em>，</em>先把剧找对</h1>
+        <p class="hero-lead">国产剧、韩剧、美剧、日漫、纪录片分门别类，附分集更新表、版本对照和观众实测评价。想按类型挑剧，或只想确认今晚几点更新，都能在这里落到具体条目。</p>
+        <div class="hero-stats">
+          <div><strong>11</strong>个内容频道</div>
+          <div><strong>268</strong>部在列剧集</div>
+          <div><strong>19</strong>条本周更新</div>
+          <div><strong>6</strong>个子分类索引</div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#updates">查看本周更新表</a>
+          <a class="btn btn-ghost" href="/#channels">按类型找剧</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 480 340" role="presentation">
+          <defs>
+            <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4e8cf"/>
+              <stop offset="1" stop-color="#e6edf7"/>
+            </linearGradient>
+          </defs>
+          <rect x="40" y="34" width="400" height="212" rx="14" fill="#1b2438"/>
+          <rect x="56" y="50" width="368" height="164" rx="8" fill="url(#scr)"/>
+          <path d="M120 82h120M120 104h180M120 126h96" stroke="#c99336" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+          <circle cx="356" cy="98" r="26" fill="#fff" opacity=".85"/>
+          <path d="M348 86l20 12-20 12z" fill="#a8433f"/>
+          <rect x="56" y="224" width="368" height="12" rx="6" fill="#2c6e6a" opacity=".35"/>
+          <rect x="120" y="246" width="240" height="74" rx="10" fill="#fff" stroke="#dfe3ec"/>
+          <path d="M146 270h84M146 288h132" stroke="#697386" stroke-width="6" stroke-linecap="round" opacity=".45"/>
+          <circle cx="322" cy="282" r="16" fill="#f4e8cf"/>
+          <path d="M316 274l12 8-12 8z" fill="#c99336"/>
+          <circle cx="88" cy="300" r="22" fill="#e6edf7"/>
+          <circle cx="404" cy="300" r="14" fill="#f6e2e1"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 领域概览 -->
+  <section class="section" id="overview">
+    <div class="wrap">
+      <div class="sec-head"><h2>剧集索引在解决什么</h2><span class="sec-desc">类型、平台、更新节奏的差异，决定找剧方式</span></div>
+      <div class="overview">
+        <div>
+          <p>剧集分散在卫视、长视频平台、短剧频道和海外流媒体，同一部剧的入口因版权区域不同而分成多个。国产剧在爱奇艺、腾讯视频、优酷之间常有独播和联播差异；韩剧多经港澳台或海外平台引进，中文译名不统一；美剧按季更新，冬歇期长达两个月。</p>
+          <p>索引按“类型—年份—平台”三层归类，不做播放，只提供入口线索和时间表。2026 年国内长视频平台在播国产剧约 140 部，其中独播剧占 63%，联播剧 37%，独播比例较 2025 年同期上升 9 个百分点。</p>
+          <ul>
+            <li><b>更新节奏</b>：卫视联播 19:35 首播，纯网剧 12:00 或 18:00，会员抢先 1—2 天。</li>
+            <li><b>译名问题</b>：韩剧引进常改名，《检察官笔记》原名为《검사의 노트》。</li>
+            <li><b>季播结构</b>：美剧 8—12 集一季，中间冬歇，追剧需看季集对照表。</li>
+            <li><b>纪录片</b>：整季上线为主，单集时长 45—55 分钟，更新不规律。</li>
+          </ul>
+        </div>
+        <aside class="ov-side">
+          <h3>本周索引数据</h3>
+          <dl>
+            <dt>在列剧集</dt><dd>268 部</dd>
+            <dt>国产剧</dt><dd>152</dd>
+            <dt>韩剧</dt><dd>41</dd>
+            <dt>美剧</dt><dd>38</dd>
+            <dt>日漫</dt><dd>25</dd>
+            <dt>纪录片</dt><dd>12</dd>
+            <dt>本周完结</dt><dd>3 部</dd>
+            <dt>数据核对</dt><dd>11 月 7 日</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选内容推荐 -->
+  <section class="section" id="picks">
+    <div class="wrap">
+      <div class="sec-head"><h2>本周值得先看的五部剧</h2><span class="sec-desc">按更新完整度、口碑和题材新鲜度筛选</span></div>
+      <div class="grid g3">
+        <article class="card">
+          <span class="pill">国产 · 古装悬疑</span>
+          <h3>风起长安</h3>
+          <p>已更 18 集，共 32 集。长安城三起命案串成一条线，第 14 集御史台审案的长镜头被观众反复截图。豆瓣开分 8.1，本周口碑最高。</p>
+          <div class="meta"><span>爱奇艺独播</span><span>每周三至周五 18:00</span></div>
+          <a class="more" href="/#updates">看分集时间 →</a>
+        </article>
+        <article class="card">
+          <span class="pill teal">韩剧 · 法律</span>
+          <h3>检察官笔记</h3>
+          <p>已更 9 集，共 12 集。서울지검 为背景，庭审戏占全剧四成。不同字幕组对“구속”译法有别，切换版本容易断剧情。</p>
+          <div class="meta"><span>tvN 水木剧</span><span>隔日上线中字</span></div>
+          <a class="more" href="/#deep">看版本对照 →</a>
+        </article>
+        <article class="card">
+          <span class="pill rose">美剧 · 科幻</span>
+          <h3>轨道之外</h3>
+          <p>第一季 10 集全上线。空间站失压情节的物理细节被 NASA 前工程师在社交平台逐帧点评，指出 3 处误差，另有 7 处符合实际。</p>
+          <div class="meta"><span>Apple TV+</span><span>整季可看</span></div>
+          <a class="more" href="/#comments">看观众反馈 →</a>
+        </article>
+        <article class="card">
+          <span class="pill">日漫 · 运动</span>
+          <h3>青空跃动</h3>
+          <p>第 2 季更新至第 7 话。鞍马项目全国大赛篇，动作分镜参考了 2025 年世锦赛录像，制作组在官推贴过分镜对照。</p>
+          <div class="meta"><span>每周日 23:30</span><span>B 站同步</span></div>
+          <a class="more" href="/#channels">进日漫频道 →</a>
+        </article>
+        <article class="card">
+          <span class="pill teal">纪录片 · 自然</span>
+          <h3>海岸线一年</h3>
+          <p>6 集全上线，摄制组在福建霞浦驻点 14 个月，潮汐表与拍摄日志同步公开，第 3 集红树林段落附完整拍摄时间。</p>
+          <div class="meta"><span>央视频</span><span>整季上线</span></div>
+          <a class="more" href="/#timeline">看制作时间线 →</a>
+        </article>
+        <article class="card">
+          <span class="pill rose">国产 · 都市</span>
+          <h3>三站之外</h3>
+          <p>已更 24 集，共 36 集。地铁通勤题材，前 10 集节奏偏慢，第 15 集后改用双线叙事，观众评价分化明显。</p>
+          <div class="meta"><span>腾讯视频</span><span>每日 20:00</span></div>
+          <a class="more" href="/#rank">看榜单位置 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="section" id="updates">
+    <div class="wrap">
+      <div class="sec-head"><h2>分集更新时间表（11 月 5 日—11 月 7 日）</h2><span class="sec-desc">时间按平台实际更新校准，会员抢先单独标注</span></div>
+      <ul class="tlist">
+        <li><time datetime="2026-11-07">11-07</time><div class="t-main"><b>风起长安</b> 第 18 集<span>爱奇艺 18:00 更新，会员可提前 1 天看第 19 集</span></div><span class="tag">古装悬疑</span></li>
+        <li><time datetime="2026-11-07">11-07</time><div class="t-main"><b>检察官笔记</b> 第 9 集<span>tvN 播出后约 4 小时出中字，本周四停播一集</span></div><span class="tag">法律</span></li>
+        <li><time datetime="2026-11-06">11-06</time><div class="t-main"><b>三站之外</b> 第 24 集<span>腾讯视频 20:00，非会员次日 12:00 解锁</span></div><span class="tag">都市</span></li>
+        <li><time datetime="2026-11-06">11-06</time><div class="t-main"><b>海岸线一年</b> 第 6 集<span>央视频整季上线完成，附拍摄日志 PDF</span></div><span class="tag teal">纪录片</span></li>
+        <li><time datetime="2026-11-05">11-05</time><div class="t-main"><b>青空跃动</b> 第 2 季第 7 话<span>B 站 23:30 同步，部分区域延迟 1 小时</span></div><span class="tag teal">日漫</span></li>
+        <li><time datetime="2026-11-05">11-05</time><div class="t-main"><b>轨道之外</b> 第一季全集<span>Apple TV+ 一次性放出 10 集，含中英双语字幕</span></div><span class="tag rose">科幻</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="section" id="channels">
+    <div class="wrap">
+      <div class="sec-head"><h2>按类型进频道</h2><span class="sec-desc">8 个主频道 + 3 个专题入口</span></div>
+      <div class="cats">
+        <a class="cat" href="/#picks"><strong>国产剧</strong><span>152 部 · 古装、都市、悬疑</span></a>
+        <a class="cat" href="/#picks"><strong>韩剧</strong><span>41 部 · 法律、爱情、复仇</span></a>
+        <a class="cat" href="/#picks"><strong>美剧</strong><span>38 部 · 科幻、犯罪、医疗</span></a>
+        <a class="cat" href="/#picks"><strong>日漫</strong><span>25 部 · 运动、奇幻、日常</span></a>
+        <a class="cat" href="/#timeline"><strong>纪录片</strong><span>12 部 · 自然、历史、社会</span></a>
+        <a class="cat" href="/#updates"><strong>短剧</strong><span>单集 2—8 分钟，日更密集</span></a>
+        <a class="cat" href="/#guide"><strong>剧集入口导航</strong><span>平台栏目与片库位置</span></a>
+        <a class="cat" href="/#deep"><strong>字幕版本对照</strong><span>译名、时间轴差异</span></a>
+        <a class="cat" href="/#rank"><strong>本周口碑榜</strong><span>按观众评分排序</span></a>
+        <a class="cat" href="/#faq"><strong>找剧避坑</strong><span>译名与版权问题</span></a>
+        <a class="cat" href="/#comments"><strong>观众实测</strong><span>追剧体验反馈</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 + 侧栏 -->
+  <section class="section" id="deep">
+    <div class="wrap">
+      <div class="sec-head"><h2>深度解析：一部剧的“可看性”该怎么核对</h2><span class="sec-desc">拆成材料、时间、版本三类可查项</span></div>
+      <div class="split">
+        <article class="deep">
+          <h3>判断一：更新稳定比“集数多”更影响追剧完成率</h3>
+          <p>2026 年 10 月 8 日至 11 月 7 日，《风起长安》保持每周三至周五 18:00 更新，32 集中已放出 18 集，中间没有停更。同期《三站之外》共 36 集，10 月 20 日因剪辑调整停更 4 天，弹幕里“断更”相关词出现频次单日升至 1.2 万条。两剧在社交平台的追更讨论量相差不到 8%，但后者的弃剧提及明显更多。</p>
+          <p>把这条拆开核对：更新时间表是否连续、停更是否提前公告、补更是否改到深夜。三项里两项失分，观众流失会集中出现。这一判断可以被反驳——如果剧集本身有强话题，停更反而制造讨论窗口。但窗口有代价，通常要在复更首周用加更补偿。</p>
+
+          <h3>判断二：字幕版本差异集中在专有名词和时间轴，不是“翻译好坏”</h3>
+          <p>《检察官笔记》第 9 集里，“구속”出现 11 次，三个中字版本分别译为“羁押”“拘留”“收押”。韩国刑事诉讼法里这三个词对应不同强制措施，混用会让观众误判角色处境。时间轴方面，流媒体版比电视录制版平均提前 0.6 秒，台词和口型对不上时，观众会先怀疑自己设备。</p>
+          <div class="quote">“换源看到第 9 集，前一句还在说保释，后一句突然‘人已经进去了’，倒回去才发现是译法换了。”——来自观众评论，指向具体集数而非整部剧。</div>
+
+          <h3>判断三：平台入口的有效期普遍短于剧集热度期</h3>
+          <p>版权到期、栏目改版、片库合并是入口失效的三个主因。2026 年 10 月 28 日，某平台把“海外剧”栏目并入“精选剧场”，原先按栏目收藏的链接大批跳转到首页。按片名页进、按年份筛、按平台片库查，三层里至少留一条可走。剧集热度期通常 6—10 周，入口有效期往往只有 4—6 周，收藏旧链接的失败率比想象中高。</p>
+
+          <div class="check">
+            <b>可核对清单：追一部剧前先看四项</b>
+            <ol>
+              <li>更新表是否连续：对照平台公告与索引时间表，看是否有停更标记。</li>
+              <li>版本是否固定：确认字幕组或官方字幕，避免中途换源。</li>
+              <li>入口是否多层：片名页、年份筛选、平台片库，至少留两条。</li>
+              <li>完结状态是否明确：已完结、连载中、待续订，三者处理方式不同。</li>
+            </ol>
+          </div>
+
+          <h3>判断四：季播剧的“冬歇”不是停播，是排期结构</h3>
+          <p>美剧《轨道之外》第一季 10 集整季放出，属于流媒体常见做法。传统电视网剧集则多为 22 集跨半年，中间冬歇 8—12 周。把两种节奏混在一起看，容易误判更新异常。索引在季集信息里单独标注“整季上线”和“周更中”，就是为了区分这两类排期。</p>
+        </article>
+
+        <aside class="side">
+          <div class="side-card">
+            <h3>本页目录</h3>
+            <nav class="side-nav" id="sideNav" aria-label="页面内目录">
+              <a href="/#overview">领域概览</a>
+              <a href="/#picks">精选推荐</a>
+              <a href="/#updates">分集更新表</a>
+              <a href="/#channels">分类入口</a>
+              <a href="/#deep">深度解析</a>
+              <a href="/#guide">体验指南</a>
+              <a href="/#faq">常见问题</a>
+              <a href="/#comments">观众评论</a>
+              <a href="/#news">相关资讯</a>
+              <a href="/#rank">口碑榜</a>
+              <a href="/#timeline">制作时间线</a>
+              <a href="/#related">相关推荐</a>
+            </nav>
+          </div>
+          <div class="side-card">
+            <h3>本周高频检索词</h3>
+            <div class="tags">
+              <a href="/#updates">风起长安更新时间</a>
+              <a href="/#deep">检察官笔记字幕版本</a>
+              <a href="/#channels">2026 古装悬疑剧</a>
+              <a href="/#faq">韩剧改名怎么找</a>
+              <a href="/#rank">豆瓣 8 分以上国产剧</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="section" id="guide">
+    <div class="wrap">
+      <div class="sec-head"><h2>找剧体验指南：四步落到具体条目</h2><span class="sec-desc">从“想看什么”到“今晚几点看”</span></div>
+      <div class="steps">
+        <div class="step">
+          <h3>先定类型和年份</h3>
+          <p>用“2026 悬疑 国产剧”这类组合词，比单词检索命中率高。索引分类页已按年份拆分，2025 年和 2026 年片单不混排。</p>
+        </div>
+        <div class="step">
+          <h3>核对译名和原名</h3>
+          <p>韩剧、日漫引进常改名。《检察官笔记》搜原名“검사의 노트”也能命中，片名页会标注两个版本。</p>
+        </div>
+        <div class="step">
+          <h3>看更新表再决定追不追</h3>
+          <p>已更集数、周更频率、是否停更，三项在更新时间表里直接可见。未完剧先看已更部分，避免等更。</p>
+        </div>
+        <div class="step">
+          <h3>固定入口和字幕版本</h3>
+          <p>入口收藏以片名页为准，字幕版本中途不换。追剧中途换源，专有名词译法变化会打断理解。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 对照面板：平台排期差异 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head"><h2>平台排期对照：卫视联播 vs 纯网独播</h2><span class="sec-desc">同一部剧在两类渠道的可见差异</span></div>
+      <div class="compare">
+        <div>
+          <h3><span class="dot" style="background:#2c6e6a"></span>卫视联播剧</h3>
+          <ul>
+            <li><b>首播时间</b>：19:35 电视台播出，22:00 后平台上线。</li>
+            <li><b>集数节奏</b>：每晚 2 集，周末可能调整，遇晚会顺延。</li>
+            <li><b>版本特征</b>：电视版有台标和角标，流媒体版画面更干净。</li>
+            <li><b>典型条目</b>：《风起长安》属联播结构，平台版比电视版晚约 2 小时。</li>
+          </ul>
+        </div>
+        <div>
+          <h3><span class="dot" style="background:#a8433f"></span>纯网独播剧</h3>
+          <ul>
+            <li><b>首播时间</b>：12:00 或 18:00 固定档，会员抢先 1—2 天。</li>
+            <li><b>集数节奏</b>：首周多放 4—6 集，之后按周更，尾声可能加更。</li>
+            <li><b>版本特征</b>：仅一个官方版本，字幕和配音由平台统一。</li>
+            <li><b>典型条目</b>：《三站之外》首周放出 8 集，第 3 周起改为每日 1 集。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2>常见问题</h2><span class="sec-desc">找剧、更新、版本、入口失效</span></div>
+      <div class="faq">
+        <details>
+          <summary>找不到某部剧，是先换关键词还是先换平台？</summary>
+          <p>先换关键词。2026 年 11 月多部韩剧引进时改名，用旧名检索会落空。把“年份 + 类型 + 原名或译名”组合起来再搜一次，仍无结果再换平台片库。平台片库按版权区域划分，同一部剧在港澳台版和内地版可能只有一边收录。</p>
+        </details>
+        <details>
+          <summary>分集更新时间表以哪个为准？</summary>
+          <p>以平台片方公告为准，索引时间表按公告校准。卫视联播剧 19:35 首播、平台 22:00 后上线；纯网剧 12:00 或 18:00 更新；会员抢先通常提前 1—2 天。遇晚会、赛事或剪辑调整，平台会提前 1 天在片名页挂公告。</p>
+        </details>
+        <details>
+          <summary>韩剧、美剧的字幕版本差异大吗？</summary>
+          <p>差异集中在专有名词和时间轴。法律剧《检察官笔记》里“구속”有“羁押”“拘留”“收押”三种译法，对应不同强制措施；时间轴上不同片源平均差 0.6 秒。追剧中途换源，理解成本比从头看更高，建议一季固定一个版本。</p>
+        </details>
+        <details>
+          <summary>纪录片入口为什么单独分类？</summary>
+          <p>纪录片多为整季上线或按周更，和日更剧集节奏不同。《海岸线一年》6 集一次性放出，摄制组驻点 14 个月，潮汐表和拍摄日志同步公开。按季集数、旁白语言、播放平台单独归档，能减少无效刷新，也方便按题材找片。</p>
+        </details>
+        <details>
+          <summary>入口链接失效怎么办？</summary>
+          <p>先回分类页按类型重新找。版权到期、栏目改版、片库合并是三个主因，2026 年 10 月 28 日某平台把“海外剧”并入“精选剧场”，旧链接大量跳首页。按片名页进、按年份筛、按平台片库查，三层里保留两条可走路径即可。</p>
+        </details>
+        <details>
+          <summary>已完结和连载中的剧，找法有什么不同？</summary>
+          <p>已完结剧优先看整季信息：总集数、是否删减、有无番外。连载中剧优先看更新表：已更集数、周更频率、停更公告。前者判断能不能一次看完，后者判断值不值得现在追。索引在条目页把两类信息分开标注，不混在一起。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="section" id="comments">
+    <div class="wrap">
+      <div class="sec-head"><h2>观众评论：指向具体条目</h2><span class="sec-desc">实测反馈，含中性意见与吐槽</span></div>
+      <div class="comments">
+        <blockquote class="cmt">
+          <p>《风起长安》第 14 集审案那场戏，镜头从御史台门口一路推进大堂，中间没切，我回看了三遍。这剧前 6 集节奏慢，第 7 集才开始收网，劝新观众别在第 3 集就弃。</p>
+          <footer><span class="avatar">陈</span>陈屿 · 11 月 6 日</footer>
+        </blockquote>
+        <blockquote class="cmt">
+          <p>《三站之外》第 15 集改双线之后确实好看了，但前 10 集真的拖。地铁通勤题材拍成了办公室闲聊，第 12 集才开始有冲突。如果不是冲着演员，我可能撑不到后面。</p>
+          <footer><span class="avatar">林</span>林一舟 · 11 月 5 日</footer>
+        </blockquote>
+        <blockquote class="cmt">
+          <p>《检察官笔记》中字版本我换了两次，第 9 集“구속”译法不一样，差点以为角色被放了。后来干脆等官方字幕，慢半天但省心。这剧庭审戏密度高，译名不统一真的很影响判断。</p>
+          <footer><span class="avatar">周</span>周未央 · 11 月 7 日</footer>
+        </blockquote>
+        <blockquote class="cmt">
+          <p>《轨道之外》空间站失压那段，我对照了 NASA 前工程师的逐帧点评，3 处错误里有两个是音效问题，画面本身没错。作为科幻剧算用心了，比很多只讲气氛的强。</p>
+          <footer><span class="avatar">吴</span>吴清 · 11 月 4 日</footer>
+        </blockquote>
+        <blockquote class="cmt">
+          <p>《海岸线一年》第 3 集红树林部分，摄制组把拍摄日志贴出来了，几月几日几点退潮都写着。这种把时间摊开的做法，比旁白念数据可信。就是更新太慢，等了一整年。</p>
+          <footer><span class="avatar">许</span>许照 · 11 月 6 日</footer>
+        </blockquote>
+        <blockquote class="cmt">
+          <p>《青空跃动》第 2 季第 7 话的分镜和 2025 年世锦赛鞍马决赛动作几乎一致，制作组官推贴过对照图，这点加分。但剧情推进慢，一话只比完一个项目，追起来有点熬。</p>
+          <footer><span class="avatar">何</span>何川 · 11 月 5 日</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="section" id="news">
+    <div class="wrap">
+      <div class="sec-head"><h2>相关资讯</h2><span class="sec-desc">11 月 1 日至 7 日的排期与片库变动</span></div>
+      <div class="grid g2">
+        <article class="card">
+          <span class="pill">排期</span>
+          <h3>《检察官笔记》本周四停播一集</h3>
+          <p>tvN 因转播体育赛事调整水木剧排期，原定 11 月 5 日播出的第 9 集顺延至 11 月 6 日，中字上线同步延后约 4 小时。第 10 集恢复原档。</p>
+          <div class="meta"><span>来源：tvN 节目表</span><span>11 月 4 日</span></div>
+        </article>
+        <article class="card">
+          <span class="pill teal">片库</span>
+          <h3>某平台“海外剧”栏目并入“精选剧场”</h3>
+          <p>栏目合并后，原按“海外剧”收藏的链接大量跳转首页。按片名页或年份筛选仍可找到条目，索引已将 41 部韩剧重新归档到韩剧频道。</p>
+          <div class="meta"><span>来源：平台公告</span><span>10 月 28 日</span></div>
+        </article>
+        <article class="card">
+          <span class="pill rose">上线</span>
+          <h3>《轨道之外》整季上线，含双语字幕</h3>
+          <p>Apple TV+ 一次性放出第一季 10 集，中英双语字幕同步提供。索引已补入季集信息，标注为“整季上线”，不按周更处理。</p>
+          <div class="meta"><span>来源：Apple TV+ 片库</span><span>11 月 5 日</span></div>
+        </article>
+        <article class="card">
+          <span class="pill">数据</span>
+          <h3>10 月在播国产剧独播比例升至 63%</h3>
+          <p>相较 2025 年同期上升 9 个百分点。独播意味着入口单一，收藏旧链接的失败风险更高，索引建议同时保留片名页和年份筛选两条路径。</p>
+          <div class="meta"><span>来源：平台公开片单统计</span><span>11 月 2 日</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="section" id="rank">
+    <div class="wrap">
+      <div class="sec-head"><h2>本周口碑榜（截至 11 月 7 日）</h2><span class="sec-desc">按观众评分与实际观看完成度综合排序</span></div>
+      <ul class="rank">
+        <li><span class="no">01</span><div class="r-main"><b>风起长安</b><span>国产剧 · 古装悬疑 · 已更 18/32 集</span></div><span class="score">8.1</span></li>
+        <li><span class="no">02</span><div class="r-main"><b>海岸线一年</b><span>纪录片 · 自然 · 6 集完结</span></div><span class="score">8.0</span></li>
+        <li><span class="no">03</span><div class="r-main"><b>轨道之外</b><span>美剧 · 科幻 · 第一季完结</span></div><span class="score">7.8</span></li>
+        <li><span class="no">04</span><div class="r-main"><b>检察官笔记</b><span>韩剧 · 法律 · 已更 9/12 集</span></div><span class="score">7.6</span></li>
+        <li><span class="no">05</span><div class="r-main"><b>青空跃动</b><span>日漫 · 运动 · 第 2 季第 7 话</span></div><span class="score">7.5</span></li>
+        <li><span class="no">06</span><div class="r-main"><b>三站之外</b><span>国产剧 · 都市 · 已更 24/36 集</span></div><span class="score">7.1</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 制作时间线 -->
+  <section class="section" id="timeline">
+    <div class="wrap">
+      <div class="sec-head"><h2>《海岸线一年》制作时间线</h2><span class="sec-desc">公开拍摄日志与潮汐表对照</span></div>
+      <ol class="timeline">
+        <li><time>2025 年 6 月</time><b>福建霞浦驻点开机</b>，摄制组 7 人，携带水下与延时设备共 14 组。</li>
+        <li><time>2025 年 9 月</time><b>红树林段落拍摄</b>，连续 23 天按潮汐表作业，最低潮位时进水拍摄。</li>
+        <li><time>2025 年 12 月</time><b>冬季候鸟迁徙</b>，在滩涂记录到 38 种鸟类，拍摄日志逐日登记。</li>
+        <li><time>2026 年 8 月</time><b>后期完成</b>，6 集总时长 312 分钟，旁白两版录制，最终选普通话版。</li>
+        <li><time>2026 年 11 月 6 日</time><b>整季上线</b>，央视频一次性放出 6 集，附拍摄日志与潮汐表 PDF。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 相关推荐 -->
+  <section class="section" id="related">
+    <div class="wrap">
+      <div class="sec-head"><h2>相关推荐</h2><span class="sec-desc">按你正在追的类型延伸</span></div>
+      <div class="tags">
+        <a href="/#picks">2026 古装悬疑国产剧</a>
+        <a href="/#picks">韩国法律剧推荐</a>
+        <a href="/#picks">科幻美剧整季上线</a>
+        <a href="/#picks">运动番分镜考据</a>
+        <a href="/#timeline">自然纪录片拍摄日志</a>
+        <a href="/#updates">卫视联播剧更新时间</a>
+        <a href="/#deep">不同字幕组译名对照</a>
+        <a href="/#guide">纯网独播剧追更方法</a>
+        <a href="/#faq">韩剧引进改名查询</a>
+        <a href="/#rank">豆瓣 8 分以上纪录片</a>
+        <a href="/#comments">观众弃剧原因统计</a>
+        <a href="/#news">10 月片库合并公告</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#2b3a55"/>
+            <circle cx="32" cy="32" r="19" fill="none" stroke="#e8b04b" stroke-width="4"/>
+            <path d="M27 23l16 9-16 9z" fill="#e8b04b"/>
+          </svg>
+          寻剧吧入口
+        </div>
+        <p>按类型、年份与平台整理剧集线索，给出分集时间与版本差异，帮助观众在入口失效之前落到具体片名页。</p>
+      </div>
+      <div>
+        <h3>频道</h3>
+        <a href="/#picks">国产剧</a>
+        <a href="/#picks">韩剧</a>
+        <a href="/#picks">美剧</a>
+        <a href="/#picks">日漫</a>
+        <a href="/#timeline">纪录片</a>
+      </div>
+      <div>
+        <h3>找剧工具</h3>
+        <a href="/#updates">分集更新表</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#deep">字幕版本对照</a>
+        <a href="/#rank">口碑榜</a>
+      </div>
+      <div>
+        <h3>说明</h3>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#related">相关推荐</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面数据为示例整理，剧名、集数与时间以平台实际公告为准。更新时间：2026 年 11 月 7 日，对应分集更新表与相关资讯两处条目。</span>
+      <span>© 2026 寻剧吧入口 · 剧集索引与观影指南</span>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=720){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var topBtn=document.getElementById('topBtn');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>420){topBtn.classList.add('show');}
+    else{topBtn.classList.remove('show');}
+  },{passive:true});
+  topBtn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=links.map(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window&&targets.length){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){
+            l.classList.toggle('active',l.getAttribute('href')==='#'+en.target.id);
+          });
+        }
+      });
+    },{rootMargin:'-30% 0px -55% 0px'});
+    targets.forEach(function(t){io.observe(t);});
+  }
+
+  var q=document.getElementById('q');
+  var msg=document.getElementById('searchMsg');
+  var db=[
+    '风起长安 古装悬疑 爱奇艺 每周三至周五',
+    '检察官笔记 韩剧 法律 tvN 水木剧',
+    '轨道之外 美剧 科幻 Apple TV+ 整季',
+    '青空跃动 日漫 运动 B站 周日',
+    '海岸线一年 纪录片 自然 央视频',
+    '三站之外 国产剧 都市 腾讯视频'
+  ];
+  function doSearch(){
+    var v=q.value.trim();
+    if(!v){msg.hidden=true;return;}
+    var hit=db.filter(function(s){return s.indexOf(v)>-1;});
+    if(hit.length){msg.hidden=true;window.location.hash='picks';}
+    else{
+      msg.hidden=false;
+      msg.textContent='未找到“'+v+'”，试试类型词或年份。';
+    }
+  }
+  document.getElementById('searchBtn').addEventListener('click',doSearch);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doSearch();}});
+  q.addEventListener('input',function(){if(msg)msg.hidden=true;});
+})();
+</script>
+</body>
+              </html>
